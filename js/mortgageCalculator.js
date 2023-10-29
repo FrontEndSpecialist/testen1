@@ -72,11 +72,7 @@ function calculateMortgage(
   mortgageDuration = parseInt(mortgageDuration);
   hasStudentLoan = Boolean(hasStudentLoan);
 
-  // Controleer de postcode en weiger de hypotheek indien deze in het opgegeven gebied ligt
   const forbiddenZipcodes = ["9679", "9681", "9682"];
-  if (forbiddenZipcodes.includes(zipcode)) {
-    return "Hypotheekaanvragen voor dit postcodegebied worden niet geaccepteerd.";
-  }
 
   const maxLoanAmount = calculateMaxLoanAmount(
     income,
