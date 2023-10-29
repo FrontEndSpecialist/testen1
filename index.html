@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>Hypotheek Calculator</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Hypotheek Calculator</h1>
+      <div class="input-section">
+        <label for="income">Maandinkomen:</label>
+        <input type="number" id="income" />
+      </div>
+      <div class="input-section">
+        <label for="partnerIncome"
+          >Partnerinkomen (indien van toepassing):</label
+        >
+        <input type="number" id="partnerIncome" />
+      </div>
+      <div class="input-section">
+        <label for="mortgageDuration ">Rentevaste periode:</label>
+        <select class="space" id="mortgageDuration">
+          <option value="1">1 jaar</option>
+          <option value="5">5 jaar</option>
+          <option value="10">10 jaar</option>
+          <option value="20">20 jaar</option>
+          <option value="30">30 jaar</option>
+        </select>
+      </div>
+      <div class="input-section">
+        <label for="zipcode">Postcode:</label>
+        <input type="text" id="zipcode" />
+      </div>
+      <div class="input-section">
+        <label for="hasStudentLoan">Heeft u een studieschuld?</label>
+        <input type="checkbox" id="hasStudentLoan" />
+      </div>
+      <button id="calculateButton">Bereken</button>
+      <div class="output-section">
+        <p>Maximaal te lenen bedrag: <span id="maxLoanAmount"></span></p>
+        <p>Maandelijkse lasten: <span id="monthlyPayments"></span></p>
+        <p id="totalCostText">
+          Totale kosten na <span id="mortgageDurationText"></span>:
+        </p>
+        <span id="totalCost"></span>
+      </div>
+      <div class="output-section">
+        <h2>Rente en Aflossing per Maand:</h2>
+        <ul id="interestSchedule"></ul>
+      </div>
+    </div>
+    <script src="./js/mortgageCalculator.js"></script>
+    <script src="./js/domManipulation.js"></script>
+    <script src="./js/main.test.js"></script>
+  </body>
+</html>
